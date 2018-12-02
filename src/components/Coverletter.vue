@@ -28,13 +28,14 @@
                     </p>
                 </div>
             <img class="squiggle" src="../assets/squiggle.svg">
-            <a href="/"><div class="schedule cl-schedule">portfolio</div></a>
-            <a href="https://drive.google.com/file/d/15ZzNHDTi7PuNY-vqS0GAV_YLAIM6Bu49/view?usp=sharing"><div class="schedule cl-schedule">resume</div></a>
+            <a href="https://drive.google.com/file/d/1EWxX4qsiqOcjhyxd5JTVpoVpEhbLKJHl/view"><div class="schedule cl-schedule">resume</div></a>
+            <a href="/"><div class="schedule cl-schedule">back to portfolio</div></a>
         </div>
         </div>
     </div>
-    <img class="alt-bg" src="../assets/background1:2.svg">
-    <img class="alt-bg1" src="../assets/first ball.svg">  
+    <!-- <img class="alt-bg" src="../assets/background1:2.svg"> -->
+    <img class="alt-bg" src="../assets/background1-bw.svg">
+    <!-- <img class="alt-bg1" src="../assets/first ball.svg">   -->
 </div>
 </template>
 
@@ -46,6 +47,8 @@
     width: 600px;
     margin: 4rem auto;
     border-radius: 2rem;
+    // border:1px solid green;
+    box-shadow: 0px 20px 20px #e6e6e6;
     background: #ffffff;
 }
 .headline-cl *{
