@@ -10,12 +10,12 @@
           <span class="hidden hidden-right" v-infocus="'showElement'">{{fireInfo.headline2}}</span>
           <span class="hidden hidden-left" v-infocus="'showElement'">{{fireInfo.headline3}}</span>
         </div>
-        <button class="schedule" @click="scrollMeTo('contact')">Contact</button>
         <div class="spacer"></div>
         <img class="profile-logo" src="../assets/Avatar.svg"> 
         <h2 class="hidden hidden-up genre-quote" v-infocus="'showElement-slow'">
           {{fireInfo.intro}}
         </h2>
+        <button class="schedule" @click="scrollMeTo('contact')">Contact</button>
       </div>
       
       <div class="spacer"></div>

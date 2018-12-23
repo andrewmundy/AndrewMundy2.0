@@ -8,7 +8,7 @@
             {{genre[1].description}}
         </h2>
         <div class="projects">
-            <div v-if="project" v-for="project in genre[1].projects.slice(1)" :key="project && project.id" class="project hidden hidden-up" v-infocus="'showElement'">
+            <div v-if="project" v-for="project in genre[1].projects.slice(1).reverse()" :key="project && project.id" class="project hidden hidden-up" v-infocus="'showElement'">
                     <router-link :to="'/project/' + project.title">
                         <img :src="project && project.img">
                             <div class="text">

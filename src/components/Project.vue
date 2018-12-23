@@ -17,12 +17,17 @@
                 </div>
             </div>
         </div>
-        <img class="banner-image" v-infocus="'showElement'" :src="content.banner">
+        <img v-bind:class="[ small ? 'small' : 'banner-image' ]" v-infocus="'showElement'" :src="content.banner">
+        <p></p>
         <img class="hidden hidden-right squiggle" v-infocus="'showElement-slow'" src="../assets/squiggle.svg">
 
         <div class="bullets">
             <div v-for="bullet in content.bullets" :key="bullet.key" class="bullet hidden hidden-left-fast" v-infocus="'showElement'">
-                <img :src="bullet.img"/> 
+                <a :href="bullet.img">
+                    <img :src="bullet.img" 
+                        v-bind:class="{ 'small': small }"
+                    /> 
+                </a>
                 <span v-if="bullet.caption">
                     <p>{{bullet.caption}}</p>
                 </span>
@@ -88,10 +93,17 @@
         margin-top: 8rem;
         text-shadow: 1px 1px 0px white;
         align-items: flex-start;
-        img{
-            border-radius: 0.5rem;
+        a{
             width:65%;
-            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.171);
+            img{
+                border-radius: 0.5rem;
+                width:auto;
+                max-width:100%;
+                box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.171);
+            }
+        }
+        .small{
+            max-width: 30%;
         }
         span{
             p{
@@ -180,7 +192,9 @@
 
 }
 .banner-image{
-    width:100%;
+    // width:100%;
+    width:auto;
+    max-width:100%;
     height: auto;
 }
     .project-header{
@@ -197,7 +211,9 @@
   .back {
     margin: 2rem;
   }
-
+    .small{
+        width: 50%;
+    }
   .genre-quote {
     padding: 2rem;
     color: white;
@@ -220,6 +236,9 @@
                   width:100%;
                   border-radius: 0px;
               }
+             .small{
+                    max-width: 100%;
+                }
               span{
                 width: 90%;
                 margin: auto;
@@ -320,7 +339,8 @@
         name: this.$route.params.name,
         entries: {},
         entrie: {},
-        content: {}
+        content: {},
+        small: false
       }
     },
     mounted () {
@@ -354,14 +374,17 @@
                   modules.ask = data.project.modules[1].text_plain
                   modules.blurb = data.project.modules[2].text_plain
                   modules.story = data.project.modules[3].text_plain
-                  modules.banner = data.project.modules[4].sizes[1400] || data.project.modules[4].sizes['max_1200']
+                  modules.banner = data.project.modules[4].sizes[1400] || data.project.modules[4].sizes['max_1200'] || data.project.modules[4].sizes['disp']
+                //   console.log(data.project.modules[4])
                   modules.bullets = {}
 
                   for (let i = 5; i < data.project.modules.length; i++) {
                     if (data.project.modules[i].type === 'image') {
                       modules.bullets[i] = {}
-                      modules.bullets[i].img = data.project.modules[i].sizes[1400] || data.project.modules[i].sizes['max_1200']
+                      modules.bullets[i].img = data.project.modules[i].sizes[1400] || data.project.modules[i].sizes['max_1200'] || data.project.modules[i].sizes['disp']
                       modules.bullets[i].caption = data.project.modules[i].caption_plain
+                      console.log(modules.bullets[i].img)
+                    //   modules.bullets[i].img = data.project.modules[i].sizes['disp'] ? this.small = true : this.small = false
                     } else {
                       modules.close = data.project.modules[i].text
                     }
