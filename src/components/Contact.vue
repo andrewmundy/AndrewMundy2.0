@@ -16,9 +16,9 @@
           <a href="https://github.com/andrewmundy" alt="github"><img class="hidden hidden-up" v-infocus="'showElement-fast'" src="../assets/icons/github.svg"></a>
           <a href="https://codepen.io/andrewmundy/" alt="codepen"><img class="hidden hidden-up-fast" v-infocus="'showElement'" src="../assets/icons/codepen.svg"></a>
           <a href="https://www.behance.net/andrewmundy" alt="behance"><img class="hidden hidden-up" v-infocus="'showElement'" src="../assets/icons/behance.svg"></a>
-          <a href="https://dribbble.com/andrewmundy" alt="dribble"><img class="hidden hidden-up-fast" v-infocus="'showElement'" src="../assets/icons/dribbble.svg"></a>
           <a href="https://twitter.com/andrewmundy" alt="twitter"><img class="hidden hidden-up" v-infocus="'showElement-fast'" src="../assets/icons/twitter.svg"></a>
           <a href="https://www.linkedin.com/in/andrew-mundy/" alt="linkedin"><img class="hidden hidden-up" v-infocus="'showElement'" src="../assets/icons/linkedin.svg"></a>
+          <a href="mailto:andrewmundy@gmail.com" alt="email"><img class="hidden hidden-up-fast" v-infocus="'showElement'" src="../assets/icons/email.svg"></a>
         </div>
 
         <h5 class="copywrite">created with 🍹 by Andrew Mundy</h5>

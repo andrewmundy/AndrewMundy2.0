@@ -121,9 +121,9 @@ export default {
         width:25vw;
         background: white;   
         margin:1rem;
-        border-radius: 10px;
+        // border-radius: 10px;
         overflow: hidden;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.171);
+        box-shadow: 0 10px 20px rgba(116, 116, 116, 0.1);
         img{
             width:100%;
             filter:opacity(1);
